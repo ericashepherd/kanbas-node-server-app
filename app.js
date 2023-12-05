@@ -28,7 +28,8 @@ const app = express();
 app.use(
   cors({
     withCredentials: true,
-    credentials: 'omit',
+    credentials: 'same-origin',
+    origin: process.env.FRONT_END_URL
   })
 );
 
