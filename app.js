@@ -27,6 +27,7 @@ db.once('open', () => {
 const app = express();
 app.use(
   cors({
+    withCredentials: true,
     credentials: 'omit',
   })
 );
