@@ -27,9 +27,8 @@ db.once('open', () => {
 const app = express();
 app.use(
   cors({
-    withCredentials: true,
-    credentials: 'same-origin',
-    origin: process.env.FRONT_END_URL
+    credentials: true,
+    origin: 'https://a6--lucent-rugelach-29c3b7.netlify.app',
   })
 );
 
