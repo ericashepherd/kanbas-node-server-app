@@ -28,6 +28,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
+    withCredentials: true,
     origin: 'https://a6--lucent-rugelach-29c3b7.netlify.app',
   })
 );
