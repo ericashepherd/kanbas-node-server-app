@@ -26,7 +26,10 @@ db.once('open', () => {
 
 const app = express();
 app.use(
-  cors()
+  cors({
+    withCredentials: true,
+    origin: process.env.FRONTEND_URL,
+  })
 );
 
 const sessionOptions = {
@@ -55,4 +58,4 @@ HelloRoutes(app);
 SectionRoutes(app);
 EnrollmentRoutes(app);
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
